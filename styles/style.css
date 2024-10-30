@@ -55,7 +55,6 @@ ol {
 .content__list {
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 534px;
 }
 
 .search-form {
@@ -64,15 +63,21 @@ ol {
 }
 
 .result__video-container {
+  position: relative;
   width: 711px;
-  height: 456px;
+  height: 386px;
+  margin-bottom: 16px;
 }
 
 .result__video {
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }
 
+.content__list {
+  position: relative;
+}
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -91,3 +96,10 @@ ol {
 .content__video-card-description-container {
   flex-grow: 1;
 }
+
+.content__details {
+  width: 399px;
+  height: 534px;
+}
+
+
