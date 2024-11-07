@@ -219,7 +219,7 @@ input[type="radio"] {
   line-height: 30px;
   font-family: Oswald;
 }
-/* Git ругается, но CSS код этого класса Яндекс дал для копирования в проект */
+
 .visually-hidden { 
   clip: rect(0 0 0 0);
   position: absolute;
@@ -291,7 +291,6 @@ input[type="radio"] {
   height: 18px;
   content: "";
 }
-
 
 .content__card-link {
   margin: 2px;
