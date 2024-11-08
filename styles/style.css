@@ -62,18 +62,13 @@ input[type="radio"] {
   height: 100%;
 }
 
-.content__list {
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
 .search-form {
   display: flex;
   gap: 40px;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   text-align: left;
 }
 
@@ -83,6 +78,7 @@ input[type="radio"] {
   line-height: inherit;
   font-family: inherit;
 }
+
 .search-form__textfield {
   background-color: transparent;
   font-weight: inherit;
@@ -119,13 +115,22 @@ input[type="radio"] {
   background-color: #545050;
 }
 
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
 .search-form__label:has(.search-form__textfield:focus-visible) {
+  outline: 1px solid white;
+}
+
+.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
   outline: 1px solid white;
 }
 
 .content__video-card:hover {
   text-decoration: underline;
 }
+
 .button {
   border: 1px solid white;
   background-color: transparent;
@@ -135,7 +140,7 @@ input[type="radio"] {
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   text-align: center;
 }
 
@@ -150,16 +155,23 @@ input[type="radio"] {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .content__list {
   position: relative;
+  overflow-y: scroll;
 }
+
 .content__list-item {
   margin-bottom: 30px;
 }
 
 .content__list-item:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.content__list-item:last-child {
   margin-bottom: 0;
 }
 
@@ -172,6 +184,7 @@ input[type="radio"] {
   background-size: cover;
   width: 194px;
   height: 103px;
+  object-fit: contain;
 }
 
 .content__video-card-description-container {
@@ -183,8 +196,7 @@ input[type="radio"] {
 }
 
 .content__details {
-  width: 399px;
-  height: 534px;
+  max-height: 534px;
 }
 
 .search-form__fieldset-title {
@@ -197,7 +209,7 @@ input[type="radio"] {
   font-weight: 700;
   font-size: 75px;
   line-height: 70.5px;
-  font-family: Oswald;
+  font-family: "Oswald", "Montserrat", "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
 
@@ -209,6 +221,19 @@ input[type="radio"] {
   display: block;
   color: white;
   text-decoration: none;
+  margin: 2px;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid white;
+}
+
+.content__card-link:focus {
+  outline: 1px solid white;
+}
+
+.content__card-link:active {
+  outline: none;
 }
 
 .content__card-link_current {
@@ -219,10 +244,14 @@ input[type="radio"] {
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
-  font-family: Oswald;
+  font-family: "Oswald", "Montserrat", "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.visually-hidden { 
+.visually-hidden {
   clip: rect(0 0 0 0);
   position: absolute;
   clip-path: inset(50%);
@@ -241,6 +270,7 @@ input[type="radio"] {
 
 .search-form__label {
   width: fit-content;
+  align-items: center;
 }
 
 .search-form__checkbox-list {
@@ -252,6 +282,10 @@ input[type="radio"] {
   appearance: none;
   min-width: 225px;
   color: white;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .more-button {
@@ -270,7 +304,7 @@ input[type="radio"] {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: flex;
   position: relative;
   cursor: pointer;
   margin-right: 5px;
@@ -292,8 +326,4 @@ input[type="radio"] {
   width: 18px;
   height: 18px;
   content: "";
-}
-
-.content__card-link {
-  margin: 2px;
 }
