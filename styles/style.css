@@ -7,7 +7,7 @@
 html {
   block-size: 100%;
 }
-/* Git ругался, макет у меня в Figma новее, чем в Git, вероятно. Пришлось убрать 100% высоту страницы, так как у Git в тестах отступ сверху слишком большой. В Figma - 133px */
+
 .page {
   margin: auto;
   background-color: #1b1919;
@@ -52,7 +52,7 @@ input[type="radio"] {
   display: flex;
   align-items: end;
   gap: 30px;
-  margin: 273px 30px 0px 30px;
+  margin: 133px 30px 0px 30px;
 }
 
 .content__details {
