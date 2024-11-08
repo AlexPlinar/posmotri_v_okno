@@ -12,10 +12,13 @@ html {
   margin: auto;
   background-color: #1b1919;
   inline-size: 1200px;
-  /* block-size: 100%; */
+  block-size: 100%;
   color: #fff;
   font-size: 18px;
   font-family: "Fira Sans Condensed", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1,
